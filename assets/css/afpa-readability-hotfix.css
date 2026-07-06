@@ -1,0 +1,417 @@
+/* AFPA P2 READABILITY HOTFIX
+   Amaç: açık tema denemesi sonrası okunmayan hero, hizmet kartı ve buton metinlerini
+   tek dosyada, geri alınabilir şekilde stabilize etmek.
+   Not: Bu dosya style.css veya white-preview.css sonuna kör fix eklemez; tüm HTML'lerde en son yüklenir.
+*/
+
+:root{
+  --afpa-p2-dark:#04150f;
+  --afpa-p2-dark-2:#08231b;
+  --afpa-p2-cream:#fffaf0;
+  --afpa-p2-soft:rgba(255,250,240,.92);
+  --afpa-p2-muted:rgba(255,250,240,.78);
+  --afpa-p2-green:#8be35a;
+  --afpa-p2-blue:#18a9d1;
+  --afpa-p2-ink:#10231e;
+}
+
+/* 1) Koyu görsel üstündeki yazılar: her zaman net ve tam opak */
+body .hero,
+body section.hero,
+body .page-hero,
+body section.hero.page-hero,
+body .services-hero,
+body .content-page-hero,
+body .en-hero{
+  position:relative !important;
+  overflow:hidden !important;
+  color:var(--afpa-p2-cream) !important;
+  background:
+    linear-gradient(90deg,
+      rgba(3,14,10,.98) 0%,
+      rgba(4,21,15,.93) 34%,
+      rgba(4,21,15,.72) 58%,
+      rgba(4,21,15,.50) 100%),
+    url("../images/hero/hero-saha-guvenligi.png") center right / cover no-repeat !important;
+  background-blend-mode:normal !important;
+}
+
+body .hero::before,
+body .page-hero::before,
+body .services-hero::before,
+body .content-page-hero::before,
+body .en-hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  opacity:1 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(circle at 16% 36%, rgba(24,169,209,.20), transparent 30%),
+    linear-gradient(90deg,
+      rgba(2,10,7,.78) 0%,
+      rgba(2,10,7,.50) 42%,
+      rgba(2,10,7,.18) 100%) !important;
+}
+
+body .hero .wrap,
+body .hero .hero-content,
+body .page-hero .wrap,
+body .services-hero .wrap,
+body .content-page-hero .wrap,
+body .en-hero .wrap{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+body .hero .hero-copy,
+body .page-hero .hero-copy,
+body .services-hero .hero-copy,
+body .content-page-hero .hero-copy,
+body .en-hero .hero-copy{
+  position:relative !important;
+  z-index:3 !important;
+  max-width:820px !important;
+}
+
+body .hero h1,
+body .page-hero h1,
+body .services-hero h1,
+body .content-page-hero h1,
+body .en-hero h1,
+body .hero h1 em,
+body .page-hero h1 em,
+body .services-hero h1 em,
+body .content-page-hero h1 em,
+body .en-hero h1 em{
+  color:var(--afpa-p2-cream) !important;
+  -webkit-text-fill-color:var(--afpa-p2-cream) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:0 6px 30px rgba(0,0,0,.76), 0 1px 1px rgba(0,0,0,.42) !important;
+}
+
+body .hero .lead,
+body .hero p,
+body .page-hero .lead,
+body .page-hero p,
+body .services-hero .lead,
+body .services-hero p,
+body .content-page-hero .lead,
+body .content-page-hero p,
+body .en-hero .lead,
+body .en-hero p{
+  color:var(--afpa-p2-soft) !important;
+  -webkit-text-fill-color:var(--afpa-p2-soft) !important;
+  opacity:1 !important;
+  font-weight:650 !important;
+  text-shadow:0 4px 22px rgba(0,0,0,.72) !important;
+}
+
+body .hero .chapter,
+body .page-hero .chapter,
+body .services-hero .chapter,
+body .content-page-hero .chapter,
+body .en-hero .chapter,
+body .hero .eyebrow,
+body .page-hero .eyebrow,
+body .services-hero .eyebrow,
+body .content-page-hero .eyebrow,
+body .en-hero .eyebrow{
+  color:var(--afpa-p2-green) !important;
+  -webkit-text-fill-color:var(--afpa-p2-green) !important;
+  opacity:1 !important;
+  text-shadow:0 3px 16px rgba(0,0,0,.58) !important;
+}
+
+body .hero .btn,
+body .page-hero .btn,
+body .services-hero .btn,
+body .content-page-hero .btn,
+body .en-hero .btn{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+  border-color:rgba(255,255,255,.32) !important;
+  box-shadow:0 16px 40px rgba(0,0,0,.24) !important;
+}
+
+body .hero .btn:not(.btn-primary),
+body .page-hero .btn:not(.btn-primary),
+body .services-hero .btn:not(.btn-primary),
+body .content-page-hero .btn:not(.btn-primary),
+body .en-hero .btn:not(.btn-primary){
+  background:rgba(4,21,15,.44) !important;
+  backdrop-filter:blur(8px) !important;
+}
+
+/* 2) Ana sayfa hizmet şeridi ve tüm hizmet kartları: yazı daima açık, overlay daima güçlü */
+body .service-strip,
+body .services-grid,
+body .services-showcase,
+body .home-services{
+  background:var(--afpa-p2-dark) !important;
+}
+
+body .service-card,
+body a.service-card,
+body .service-tile,
+body .service-panel,
+body .service-item,
+body .services-card,
+body .services-item,
+body .services-grid article,
+body .services-showcase article,
+body .home-services article,
+body [class*="service-card"],
+body [class*="service-tile"],
+body [class*="service-panel"]{
+  position:relative !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  background:var(--afpa-p2-dark) !important;
+  color:#fff !important;
+}
+
+body .service-card img,
+body .service-card svg,
+body .service-tile img,
+body .service-panel img,
+body .service-item img,
+body .services-card img,
+body .services-item img,
+body .services-grid article img,
+body .services-showcase article img,
+body .home-services article img,
+body [class*="service-card"] img,
+body [class*="service-tile"] img,
+body [class*="service-panel"] img{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  opacity:.70 !important;
+  filter:brightness(.48) contrast(1.12) saturate(.95) !important;
+}
+
+body .service-card::before,
+body .service-tile::before,
+body .service-panel::before,
+body .service-item::before,
+body .services-card::before,
+body .services-item::before,
+body .services-grid article::before,
+body .services-showcase article::before,
+body .home-services article::before,
+body [class*="service-card"]::before,
+body [class*="service-tile"]::before,
+body [class*="service-panel"]::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:
+    linear-gradient(180deg,
+      rgba(2,10,7,.28) 0%,
+      rgba(2,10,7,.54) 42%,
+      rgba(2,10,7,.92) 100%) !important;
+}
+
+body .service-card::after,
+body .service-tile::after,
+body .service-panel::after,
+body .service-item::after,
+body .services-card::after,
+body .services-item::after,
+body .services-grid article::after,
+body .services-showcase article::after,
+body .home-services article::after,
+body [class*="service-card"]::after,
+body [class*="service-tile"]::after,
+body [class*="service-panel"]::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  border:1px solid rgba(255,255,255,.16) !important;
+  background:linear-gradient(90deg, rgba(0,0,0,.18), transparent 44%) !important;
+}
+
+body .service-content,
+body .service-card .service-content,
+body .service-tile-content,
+body .service-panel-content,
+body .service-item-content,
+body .services-card-content,
+body .services-item-content,
+body .services-grid article > *,
+body .services-showcase article > *,
+body .home-services article > *{
+  position:relative !important;
+  z-index:5 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+body .service-card .service-content{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  transform:none !important;
+  padding:28px 24px 26px !important;
+}
+
+body .service-card h2,
+body .service-card h3,
+body .service-card h4,
+body .service-card p,
+body .service-card span,
+body .service-card strong,
+body .service-card .service-no,
+body .service-card .service-content h3,
+body .service-card .service-content span,
+body .service-tile h2,
+body .service-tile h3,
+body .service-tile h4,
+body .service-tile p,
+body .service-tile span,
+body .service-tile strong,
+body .service-tile-content h3,
+body .service-tile-content p,
+body .service-tile-content span,
+body .service-tile-content strong,
+body .service-panel h2,
+body .service-panel h3,
+body .service-panel h4,
+body .service-panel p,
+body .service-panel span,
+body .service-panel strong,
+body .service-item h2,
+body .service-item h3,
+body .service-item h4,
+body .service-item p,
+body .service-item span,
+body .service-item strong,
+body .services-card h2,
+body .services-card h3,
+body .services-card h4,
+body .services-card p,
+body .services-card span,
+body .services-card strong,
+body .services-item h2,
+body .services-item h3,
+body .services-item h4,
+body .services-item p,
+body .services-item span,
+body .services-item strong,
+body .services-grid article h2,
+body .services-grid article h3,
+body .services-grid article h4,
+body .services-grid article p,
+body .services-grid article span,
+body .services-grid article strong,
+body .services-showcase article h2,
+body .services-showcase article h3,
+body .services-showcase article h4,
+body .services-showcase article p,
+body .services-showcase article span,
+body .services-showcase article strong,
+body .home-services article h2,
+body .home-services article h3,
+body .home-services article h4,
+body .home-services article p,
+body .home-services article span,
+body .home-services article strong{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.78), 0 1px 1px rgba(0,0,0,.55) !important;
+}
+
+body .service-card .service-no,
+body .service-card .service-content span,
+body .service-tile-content span,
+body .service-tile-content strong,
+body .service-panel strong,
+body .service-item strong,
+body .services-card strong,
+body .services-item strong{
+  color:var(--afpa-p2-green) !important;
+  -webkit-text-fill-color:var(--afpa-p2-green) !important;
+  opacity:1 !important;
+  transform:none !important;
+}
+
+body .service-card .service-content span{
+  display:inline-flex !important;
+  opacity:1 !important;
+  transform:none !important;
+  margin-top:18px !important;
+}
+
+body .service-card:hover img,
+body .service-tile:hover img,
+body .service-panel:hover img,
+body .service-item:hover img,
+body [class*="service-card"]:hover img,
+body [class*="service-tile"]:hover img{
+  opacity:.78 !important;
+  filter:brightness(.54) contrast(1.15) saturate(1.02) !important;
+}
+
+/* 3) Açık zeminlerde normal metin koyu kalsın; koyu alan dışına beyaz metin taşmasın */
+body .story,
+body .section-space,
+body .home-about-premium,
+body .why-afpa-section,
+body .page-section,
+body .content-section,
+body .quote-band:not(.dark):not(.quote-panel),
+body .trust-band{
+  color:var(--afpa-p2-ink) !important;
+}
+
+body .story h1,
+body .story h2,
+body .story h3,
+body .section-space h1,
+body .section-space h2,
+body .section-space h3,
+body .home-about-premium h1,
+body .home-about-premium h2,
+body .home-about-premium h3,
+body .why-afpa-section h1,
+body .why-afpa-section h2,
+body .why-afpa-section h3,
+body .page-section h1,
+body .page-section h2,
+body .page-section h3,
+body .content-section h1,
+body .content-section h2,
+body .content-section h3{
+  color:var(--afpa-p2-ink) !important;
+  -webkit-text-fill-color:var(--afpa-p2-ink) !important;
+  text-shadow:none !important;
+}
+
+@media (max-width: 920px){
+  body .hero .hero-copy,
+  body .page-hero .hero-copy,
+  body .services-hero .hero-copy{
+    max-width:100% !important;
+  }
+
+  body .service-card .service-content{
+    padding:24px 20px 22px !important;
+  }
+}
