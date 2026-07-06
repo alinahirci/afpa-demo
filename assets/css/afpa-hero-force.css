@@ -1,0 +1,221 @@
+/* AFPA P3 FORCE HERO READABILITY
+   Hakkimizda/hero alaninda beyaz zemin ustune beyaz yazi sorununu kesin kapatir.
+   Bu dosya en son yuklenir ve sadece hero + gorselli hizmet kartlarini hedefler.
+*/
+
+:root{
+  --afpa-force-dark:#03100c;
+  --afpa-force-cream:#fffaf0;
+  --afpa-force-soft:rgba(255,250,240,.90);
+  --afpa-force-green:#8be35a;
+}
+
+html body main > section.hero,
+html body main > section.hero.page-hero,
+html body .hero.page-hero,
+html body .page-hero,
+html body .content-page-hero,
+html body .services-hero,
+html body .quote-form-hero,
+html body .en-hero{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  min-height:680px !important;
+  color:var(--afpa-force-cream) !important;
+  background:
+    linear-gradient(90deg,
+      rgba(2,9,7,.99) 0%,
+      rgba(3,16,12,.97) 32%,
+      rgba(3,16,12,.86) 58%,
+      rgba(3,16,12,.64) 100%),
+    url("../images/hero/hero-saha-guvenligi.png") center right / cover no-repeat !important;
+  background-color:var(--afpa-force-dark) !important;
+  background-blend-mode:normal !important;
+}
+
+html body main > section.hero::before,
+html body main > section.hero.page-hero::before,
+html body .hero.page-hero::before,
+html body .page-hero::before,
+html body .content-page-hero::before,
+html body .services-hero::before,
+html body .quote-form-hero::before,
+html body .en-hero::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:
+    radial-gradient(circle at 18% 38%, rgba(24,169,209,.24), transparent 31%),
+    linear-gradient(180deg, rgba(1,8,6,.28), rgba(1,8,6,.82)) !important;
+}
+
+html body main > section.hero::after,
+html body main > section.hero.page-hero::after,
+html body .hero.page-hero::after,
+html body .page-hero::after,
+html body .content-page-hero::after,
+html body .services-hero::after,
+html body .quote-form-hero::after,
+html body .en-hero::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:linear-gradient(90deg, rgba(0,0,0,.38), rgba(0,0,0,.10) 64%, transparent) !important;
+}
+
+html body .hero .wrap,
+html body .hero .hero-content,
+html body .hero .hero-copy,
+html body .page-hero .wrap,
+html body .page-hero .hero-content,
+html body .page-hero .hero-copy,
+html body .content-page-hero .wrap,
+html body .services-hero .wrap,
+html body .quote-form-hero .wrap,
+html body .en-hero .wrap{
+  position:relative !important;
+  z-index:5 !important;
+}
+
+html body .hero .hero-copy,
+html body .page-hero .hero-copy{
+  max-width:860px !important;
+}
+
+html body .hero h1,
+html body .page-hero h1,
+html body .content-page-hero h1,
+html body .services-hero h1,
+html body .quote-form-hero h1,
+html body .en-hero h1{
+  color:var(--afpa-force-cream) !important;
+  -webkit-text-fill-color:var(--afpa-force-cream) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  mix-blend-mode:normal !important;
+  filter:none !important;
+  text-shadow:0 8px 36px rgba(0,0,0,.82), 0 2px 2px rgba(0,0,0,.65) !important;
+}
+
+html body .hero p,
+html body .hero .lead,
+html body .page-hero p,
+html body .page-hero .lead,
+html body .content-page-hero p,
+html body .services-hero p,
+html body .quote-form-hero p,
+html body .en-hero p{
+  color:var(--afpa-force-soft) !important;
+  -webkit-text-fill-color:var(--afpa-force-soft) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  font-weight:650 !important;
+  text-shadow:0 5px 24px rgba(0,0,0,.80), 0 1px 1px rgba(0,0,0,.60) !important;
+}
+
+html body .hero .chapter,
+html body .page-hero .chapter,
+html body .hero .eyebrow,
+html body .page-hero .eyebrow{
+  color:var(--afpa-force-green) !important;
+  -webkit-text-fill-color:var(--afpa-force-green) !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:0 4px 18px rgba(0,0,0,.75) !important;
+}
+
+html body .hero .btn,
+html body .page-hero .btn,
+html body .content-page-hero .btn,
+html body .services-hero .btn,
+html body .quote-form-hero .btn,
+html body .en-hero .btn{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:none !important;
+}
+
+html body .hero .btn:not(.btn-primary),
+html body .page-hero .btn:not(.btn-primary){
+  background:rgba(3,16,12,.62) !important;
+  border-color:rgba(255,255,255,.34) !important;
+}
+
+/* Ana sayfa hizmet kartlari: baslik ve Incele yazilari net gorunsun */
+html body .service-card,
+html body a.service-card,
+html body [class*="service-card"]{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  background:#03100c !important;
+  color:#fff !important;
+}
+
+html body .service-card::before,
+html body [class*="service-card"]::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background:linear-gradient(180deg, rgba(0,0,0,.32), rgba(0,0,0,.90)) !important;
+}
+
+html body .service-card img,
+html body [class*="service-card"] img{
+  opacity:.58 !important;
+  filter:brightness(.42) contrast(1.15) !important;
+}
+
+html body .service-card .service-content,
+html body .service-card > *,
+html body [class*="service-card"] > *{
+  position:relative !important;
+  z-index:4 !important;
+}
+
+html body .service-card h2,
+html body .service-card h3,
+html body .service-card p,
+html body .service-card span,
+html body .service-card strong,
+html body .service-card .service-no,
+html body [class*="service-card"] h2,
+html body [class*="service-card"] h3,
+html body [class*="service-card"] p,
+html body [class*="service-card"] span,
+html body [class*="service-card"] strong{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:0 4px 22px rgba(0,0,0,.86), 0 1px 1px rgba(0,0,0,.70) !important;
+}
+
+html body .service-card .service-no,
+html body .service-card .service-content span:first-child{
+  color:var(--afpa-force-green) !important;
+  -webkit-text-fill-color:var(--afpa-force-green) !important;
+}
+
+@media (max-width: 920px){
+  html body main > section.hero,
+  html body main > section.hero.page-hero,
+  html body .hero.page-hero,
+  html body .page-hero{
+    min-height:auto !important;
+    padding-top:120px !important;
+    padding-bottom:80px !important;
+  }
+}
