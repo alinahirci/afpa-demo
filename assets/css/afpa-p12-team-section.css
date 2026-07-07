@@ -1,0 +1,231 @@
+/* AFPA P12 - Uzman Kadromuz section
+   Bu dosya ekip/uzman kartları için bağımsızdır. style.css / white-preview.css ezilmez. */
+
+.afpa-team-section {
+  position: relative;
+  padding: clamp(72px, 8vw, 120px) 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(127, 211, 77, .12), transparent 34%),
+    linear-gradient(135deg, #041713 0%, #061f1a 44%, #03110e 100%);
+  color: #f7f3ea;
+  border-top: 1px solid rgba(143, 209, 79, .16);
+  border-bottom: 1px solid rgba(143, 209, 79, .14);
+  overflow: hidden;
+}
+
+.afpa-team-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .25), transparent 38%, rgba(0, 0, 0, .18)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 80px);
+  pointer-events: none;
+}
+
+.afpa-team-section .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.afpa-team-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .75fr);
+  gap: clamp(28px, 5vw, 84px);
+  align-items: end;
+  margin-bottom: clamp(32px, 5vw, 58px);
+}
+
+.afpa-team-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #8fd14f;
+  font-weight: 800;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.afpa-team-kicker::before {
+  content: "";
+  width: 54px;
+  height: 2px;
+  background: linear-gradient(90deg, #13a7cf, #8fd14f);
+}
+
+.afpa-team-title {
+  margin: 0;
+  max-width: 860px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 6.4vw, 92px);
+  line-height: .94;
+  letter-spacing: -.045em;
+  color: #f7f3ea;
+  text-shadow: 0 24px 52px rgba(0,0,0,.28);
+}
+
+.afpa-team-title em {
+  color: #8fd14f;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.afpa-team-lead {
+  margin: 0;
+  color: rgba(247, 243, 234, .78);
+  font-size: clamp(16px, 1.25vw, 20px);
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+.afpa-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+.afpa-team-card {
+  position: relative;
+  min-height: 100%;
+  border: 1px solid rgba(143, 209, 79, .24);
+  background: rgba(2, 18, 14, .74);
+  box-shadow: 0 24px 80px rgba(0,0,0,.26);
+  overflow: hidden;
+}
+
+.afpa-team-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.35;
+  background:
+    linear-gradient(145deg, rgba(19, 167, 207, .14), rgba(143, 209, 79, .10)),
+    #08251f;
+  border-bottom: 1px solid rgba(143, 209, 79, .18);
+  display: grid;
+  place-items: center;
+  color: rgba(247, 243, 234, .68);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.afpa-team-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.afpa-team-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  background: linear-gradient(to top, rgba(2, 15, 12, .72), transparent);
+  pointer-events: none;
+}
+
+.afpa-team-body {
+  padding: clamp(22px, 2.2vw, 30px);
+}
+
+.afpa-team-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 28px;
+  margin-bottom: 14px;
+  color: #8fd14f;
+  font-weight: 900;
+  letter-spacing: .16em;
+  font-size: 13px;
+}
+
+.afpa-team-card h3 {
+  margin: 0 0 8px;
+  color: #f7f3ea;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(26px, 2.25vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -.03em;
+}
+
+.afpa-team-role {
+  margin: 0 0 14px;
+  color: #8fd14f;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.afpa-team-desc {
+  margin: 0 0 20px;
+  color: rgba(247, 243, 234, .76);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.afpa-team-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(247, 243, 234, .12);
+}
+
+.afpa-team-contact a,
+.afpa-team-contact span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid rgba(143, 209, 79, .22);
+  color: rgba(247, 243, 234, .86);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(255,255,255,.035);
+}
+
+.afpa-team-note {
+  margin-top: 22px;
+  color: rgba(247, 243, 234, .58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .afpa-team-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .afpa-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .afpa-team-card {
+    display: grid;
+    grid-template-columns: minmax(160px, 260px) 1fr;
+  }
+  .afpa-team-photo {
+    aspect-ratio: auto;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .afpa-team-section {
+    padding: 56px 0;
+  }
+  .afpa-team-card {
+    display: block;
+  }
+  .afpa-team-photo {
+    aspect-ratio: 4 / 3.6;
+    min-height: 0;
+  }
+  .afpa-team-title {
+    font-size: clamp(38px, 13vw, 58px);
+  }
+}
