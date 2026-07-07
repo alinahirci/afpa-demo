@@ -1,0 +1,179 @@
+/* AFPA P11 - Homepage final content and professional polish
+   Scope: homepage trust band, service intro, quote band, footer/legal pages.
+   Does not modify style.css or white-preview.css. */
+
+body.afpa-site-p11,
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.services-section .services-head {
+  align-items: end !important;
+  gap: clamp(24px, 4vw, 72px) !important;
+  margin-bottom: clamp(28px, 4vw, 48px) !important;
+}
+
+.services-section .services-head p {
+  max-width: 620px !important;
+  color: rgba(16, 35, 30, 0.78) !important;
+  font-size: clamp(15px, 1.35vw, 18px) !important;
+  line-height: 1.72 !important;
+  font-weight: 500 !important;
+}
+
+.trust-band .trust-grid {
+  gap: clamp(14px, 2vw, 24px) !important;
+}
+
+.trust-band .trust-card {
+  min-height: 172px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border-color: rgba(6, 90, 75, 0.18) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,252,250,.88)) !important;
+}
+
+.trust-band .trust-card strong {
+  color: #10231e !important;
+  font-size: clamp(28px, 2.6vw, 42px) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.trust-band .trust-card p {
+  color: rgba(16, 35, 30, 0.72) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+
+.quote-band {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.quote-band .section-title {
+  max-width: 760px !important;
+  letter-spacing: -0.045em !important;
+}
+
+.quote-band .text-muted {
+  max-width: 650px !important;
+  color: rgba(247, 243, 234, 0.80) !important;
+  font-size: clamp(15px, 1.3vw, 18px) !important;
+  line-height: 1.75 !important;
+}
+
+.quote-panel p {
+  font-size: clamp(22px, 3vw, 42px) !important;
+  line-height: 1.13 !important;
+}
+
+.visual-story .text-link[href="hakkimizda.html"] {
+  color: #0f6b5b !important;
+  font-weight: 800 !important;
+}
+
+.footer-legal-links {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+}
+
+.footer-legal-links a {
+  color: inherit !important;
+  opacity: .82 !important;
+  text-decoration: none !important;
+  transition: opacity .2s ease, color .2s ease !important;
+}
+
+.footer-legal-links a:hover,
+.footer-legal-links a:focus-visible {
+  opacity: 1 !important;
+  color: #8fd14f !important;
+}
+
+.legal-page-main {
+  background: #f6faf8 !important;
+  color: #10231e !important;
+}
+
+.legal-hero {
+  padding: clamp(84px, 10vw, 132px) 0 clamp(44px, 6vw, 72px) !important;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(143, 209, 79, .22), transparent 32%),
+    linear-gradient(135deg, #06261f 0%, #0b4a3f 55%, #10231e 100%) !important;
+  color: #f7f3ea !important;
+}
+
+.legal-hero .small-title,
+.legal-hero h1,
+.legal-hero p {
+  color: #f7f3ea !important;
+}
+
+.legal-hero h1 {
+  max-width: 920px !important;
+  font-size: clamp(42px, 7vw, 88px) !important;
+  line-height: .96 !important;
+  letter-spacing: -0.06em !important;
+  margin: 16px 0 !important;
+}
+
+.legal-hero p {
+  max-width: 760px !important;
+  color: rgba(247, 243, 234, .82) !important;
+  font-size: clamp(16px, 1.55vw, 20px) !important;
+  line-height: 1.7 !important;
+}
+
+.legal-content {
+  padding: clamp(42px, 6vw, 82px) 0 !important;
+}
+
+.legal-card {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: clamp(28px, 5vw, 58px) !important;
+  border: 1px solid rgba(6, 90, 75, .16) !important;
+  border-radius: 28px !important;
+  background: rgba(255, 255, 255, .92) !important;
+  box-shadow: 0 28px 90px rgba(10, 36, 31, .10) !important;
+}
+
+.legal-card h2 {
+  margin: 28px 0 10px !important;
+  color: #10231e !important;
+  font-size: clamp(24px, 3vw, 36px) !important;
+  letter-spacing: -0.035em !important;
+}
+
+.legal-card h2:first-child { margin-top: 0 !important; }
+
+.legal-card p,
+.legal-card li {
+  color: rgba(16, 35, 30, .76) !important;
+  line-height: 1.75 !important;
+  font-size: 16px !important;
+}
+
+.legal-card ul {
+  padding-left: 22px !important;
+}
+
+@media (max-width: 900px) {
+  .services-section .services-head {
+    align-items: start !important;
+    margin-bottom: 24px !important;
+  }
+
+  .trust-band .trust-card {
+    min-height: 145px !important;
+  }
+
+  .footer-legal-links {
+    justify-content: flex-start !important;
+  }
+}
