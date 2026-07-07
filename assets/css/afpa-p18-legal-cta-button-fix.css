@@ -1,0 +1,111 @@
+/* AFPA P18 - Legal pages CTA button readability fix */
+/* Scope: only KVKK / Privacy / Terms pages. Does not touch style.css or white-preview.css. */
+
+body.afpa-legal-page a,
+body.afpa-legal-final a {
+  text-decoration: none;
+}
+
+/* Legal page bottom CTA cards/sections usually sit on light backgrounds. Keep primary button, fix outline/secondary button. */
+body.afpa-legal-page .btn-secondary,
+body.afpa-legal-page .btn-outline,
+body.afpa-legal-page .button-secondary,
+body.afpa-legal-page .button-outline,
+body.afpa-legal-page .cta-secondary,
+body.afpa-legal-page .btn:not(.btn-primary):not(.btn-gradient),
+body.afpa-legal-page .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient),
+body.afpa-legal-final .btn-secondary,
+body.afpa-legal-final .btn-outline,
+body.afpa-legal-final .button-secondary,
+body.afpa-legal-final .button-outline,
+body.afpa-legal-final .cta-secondary,
+body.afpa-legal-final .btn:not(.btn-primary):not(.btn-gradient),
+body.afpa-legal-final .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient) {
+  color: #10231e !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(19, 95, 73, 0.34) !important;
+  box-shadow: 0 12px 28px rgba(3, 23, 18, 0.08) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Some old rules set button text/span separately. Force inner text readable too. */
+body.afpa-legal-page .btn-secondary *,
+body.afpa-legal-page .btn-outline *,
+body.afpa-legal-page .button-secondary *,
+body.afpa-legal-page .button-outline *,
+body.afpa-legal-page .cta-secondary *,
+body.afpa-legal-page .btn:not(.btn-primary):not(.btn-gradient) *,
+body.afpa-legal-page .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient) *,
+body.afpa-legal-final .btn-secondary *,
+body.afpa-legal-final .btn-outline *,
+body.afpa-legal-final .button-secondary *,
+body.afpa-legal-final .button-outline *,
+body.afpa-legal-final .cta-secondary *,
+body.afpa-legal-final .btn:not(.btn-primary):not(.btn-gradient) *,
+body.afpa-legal-final .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient) * {
+  color: #10231e !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+body.afpa-legal-page .btn-secondary:hover,
+body.afpa-legal-page .btn-outline:hover,
+body.afpa-legal-page .button-secondary:hover,
+body.afpa-legal-page .button-outline:hover,
+body.afpa-legal-page .cta-secondary:hover,
+body.afpa-legal-page .btn:not(.btn-primary):not(.btn-gradient):hover,
+body.afpa-legal-page .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient):hover,
+body.afpa-legal-final .btn-secondary:hover,
+body.afpa-legal-final .btn-outline:hover,
+body.afpa-legal-final .button-secondary:hover,
+body.afpa-legal-final .button-outline:hover,
+body.afpa-legal-final .cta-secondary:hover,
+body.afpa-legal-final .btn:not(.btn-primary):not(.btn-gradient):hover,
+body.afpa-legal-final .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient):hover {
+  color: #ffffff !important;
+  background: #123f34 !important;
+  border-color: #123f34 !important;
+}
+
+body.afpa-legal-page .btn-secondary:hover *,
+body.afpa-legal-page .btn-outline:hover *,
+body.afpa-legal-page .button-secondary:hover *,
+body.afpa-legal-page .button-outline:hover *,
+body.afpa-legal-page .cta-secondary:hover *,
+body.afpa-legal-page .btn:not(.btn-primary):not(.btn-gradient):hover *,
+body.afpa-legal-page .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient):hover *,
+body.afpa-legal-final .btn-secondary:hover *,
+body.afpa-legal-final .btn-outline:hover *,
+body.afpa-legal-final .button-secondary:hover *,
+body.afpa-legal-final .button-outline:hover *,
+body.afpa-legal-final .cta-secondary:hover *,
+body.afpa-legal-final .btn:not(.btn-primary):not(.btn-gradient):hover *,
+body.afpa-legal-final .afpa-btn:not(.afpa-btn-primary):not(.afpa-btn-gradient):hover * {
+  color: #ffffff !important;
+}
+
+/* Primary / gradient button remains white text. */
+body.afpa-legal-page .btn-primary,
+body.afpa-legal-page .btn-gradient,
+body.afpa-legal-page .afpa-btn-primary,
+body.afpa-legal-page .afpa-btn-gradient,
+body.afpa-legal-final .btn-primary,
+body.afpa-legal-final .btn-gradient,
+body.afpa-legal-final .afpa-btn-primary,
+body.afpa-legal-final .afpa-btn-gradient {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body.afpa-legal-page .btn-primary *,
+body.afpa-legal-page .btn-gradient *,
+body.afpa-legal-page .afpa-btn-primary *,
+body.afpa-legal-page .afpa-btn-gradient *,
+body.afpa-legal-final .btn-primary *,
+body.afpa-legal-final .btn-gradient *,
+body.afpa-legal-final .afpa-btn-primary *,
+body.afpa-legal-final .afpa-btn-gradient * {
+  color: #ffffff !important;
+}
