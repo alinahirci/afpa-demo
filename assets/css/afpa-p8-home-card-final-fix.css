@@ -1,0 +1,179 @@
+/* AFPA P8 HOME CARD FINAL FIX
+   Amaç: Ana sayfa hizmet kartlarında uzun Türkçe başlıkların kesilmesini engellemek.
+   Not: style.css / white-preview.css ezilmez. Bu dosya en son yüklendiği için sadece görünümü düzeltir.
+*/
+
+/* Kart şeridi aynı tasarımda kalır; sadece kart içi taşmalar engellenir. */
+body main .services-section .service-strip {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+body main .services-section .service-strip .service-card {
+  min-width: 0 !important;
+  min-height: 360px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+body main .services-section .service-strip .service-card .service-content {
+  position: absolute !important;
+  z-index: 10 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 20px 16px 22px !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: hidden !important;
+}
+
+body main .services-section .service-strip .service-card .service-no {
+  display: block !important;
+  margin: 0 0 8px !important;
+  color: #93ef58 !important;
+  -webkit-text-fill-color: #93ef58 !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.14em !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  text-shadow: 0 3px 14px rgba(0,0,0,.75) !important;
+}
+
+/* Kritik düzeltme: bütün h3'leri kart genişliğine sığacak ölçüye çeker. */
+body main .services-section .service-strip .service-card .service-content h3,
+body main .services-section .service-strip .service-card h3 {
+  display: block !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(22px, 1.28vw, 28px) !important;
+  line-height: 1.06 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+  text-shadow: 0 4px 18px rgba(0,0,0,.82) !important;
+}
+
+/* En uzun başlıklar için ekstra güvenli ölçü. */
+body main .services-section .service-strip .service-card[href*="risk-degerlendirmesi"] h3,
+body main .services-section .service-strip .service-card[href*="periyodik-kontroller"] h3,
+body main .services-section .service-strip .service-card[href*="mobil-saglik"] h3,
+body main .services-section .service-strip .service-card[href*="is-guvenligi"] h3,
+body main .services-section .service-strip .service-card[href*="is-hijyeni"] h3,
+body main .services-section .service-strip .service-card[href*="ise-giris"] h3 {
+  font-size: clamp(20px, 1.15vw, 25px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body main .services-section .service-strip .service-card .service-content span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-top: 0 !important;
+  color: #93ef58 !important;
+  -webkit-text-fill-color: #93ef58 !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  white-space: nowrap !important;
+  text-shadow: 0 3px 14px rgba(0,0,0,.82) !important;
+}
+
+/* Yazı arkasını güçlendirir; görseli öldürmeden okunurluk sağlar. */
+body main .services-section .service-strip .service-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 12, 10, .18) 0%,
+    rgba(1, 12, 10, .40) 42%,
+    rgba(1, 12, 10, .94) 100%
+  ) !important;
+  pointer-events: none !important;
+}
+
+body main .services-section .service-strip .service-card::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 3 !important;
+  border: 1px solid rgba(247,243,234,.22) !important;
+  background: transparent !important;
+  pointer-events: none !important;
+}
+
+body main .services-section .service-strip .service-card img {
+  z-index: 1 !important;
+  opacity: .82 !important;
+  filter: brightness(.76) contrast(1.08) saturate(.92) !important;
+}
+
+/* Orta ekranlarda 3 sütuna geçerek kırpılmayı tamamen engeller. */
+@media (max-width: 1280px) {
+  body main .services-section .service-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  body main .services-section .service-strip .service-card .service-content h3,
+  body main .services-section .service-strip .service-card h3,
+  body main .services-section .service-strip .service-card[href*="risk-degerlendirmesi"] h3,
+  body main .services-section .service-strip .service-card[href*="periyodik-kontroller"] h3,
+  body main .services-section .service-strip .service-card[href*="mobil-saglik"] h3,
+  body main .services-section .service-strip .service-card[href*="is-guvenligi"] h3,
+  body main .services-section .service-strip .service-card[href*="is-hijyeni"] h3,
+  body main .services-section .service-strip .service-card[href*="ise-giris"] h3 {
+    font-size: clamp(28px, 3vw, 42px) !important;
+    line-height: 1.04 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body main .services-section .service-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  body main .services-section .service-strip .service-card {
+    min-height: 300px !important;
+  }
+
+  body main .services-section .service-strip .service-card .service-content {
+    padding: 20px 18px 22px !important;
+  }
+
+  body main .services-section .service-strip .service-card .service-content h3,
+  body main .services-section .service-strip .service-card h3,
+  body main .services-section .service-strip .service-card[href*="risk-degerlendirmesi"] h3,
+  body main .services-section .service-strip .service-card[href*="periyodik-kontroller"] h3,
+  body main .services-section .service-strip .service-card[href*="mobil-saglik"] h3,
+  body main .services-section .service-strip .service-card[href*="is-guvenligi"] h3,
+  body main .services-section .service-strip .service-card[href*="is-hijyeni"] h3,
+  body main .services-section .service-strip .service-card[href*="ise-giris"] h3 {
+    font-size: 32px !important;
+    line-height: 1.04 !important;
+  }
+}
