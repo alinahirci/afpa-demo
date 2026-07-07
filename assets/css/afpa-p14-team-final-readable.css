@@ -1,0 +1,258 @@
+/* AFPA P14 - Uzman Kadromuz final okunurluk duzeltmesi */
+/* Bu dosya sadece Uzman Kadromuz bolumunu hedefler ve onceki CSS'leri ezmeden en son yuklenir. */
+
+/* Bolum zemini ve genel kontrast */
+.afpa-team-section,
+section.afpa-team-section,
+.home-team-section,
+.about-team-section,
+section:has(.afpa-team-kicker) {
+  position: relative !important;
+  isolation: isolate !important;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(32, 178, 139, 0.14), transparent 34%),
+    linear-gradient(135deg, #031c17 0%, #052a22 52%, #02130f 100%) !important;
+  color: #f7f3ea !important;
+}
+
+/* Arkadaki dev golge yazi okunurlugu oldurmesin */
+.afpa-team-section .section-bg-word,
+.afpa-team-section .ghost-title,
+.afpa-team-section .bg-word,
+.afpa-team-section [class*="ghost"],
+.afpa-team-section [class*="background"],
+section:has(.afpa-team-kicker) .section-bg-word,
+section:has(.afpa-team-kicker) .ghost-title,
+section:has(.afpa-team-kicker) .bg-word,
+section:has(.afpa-team-kicker) [class*="ghost"] {
+  color: rgba(247, 243, 234, 0.045) !important;
+  opacity: 0.18 !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Kicker */
+.afpa-team-section .afpa-team-kicker,
+section:has(.afpa-team-kicker) .afpa-team-kicker {
+  color: #9fe870 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.38) !important;
+  letter-spacing: 0.22em !important;
+  font-weight: 800 !important;
+}
+
+/* Ana baslik */
+.afpa-team-section h2,
+.afpa-team-section .section-title,
+.afpa-team-section .afpa-team-title,
+section:has(.afpa-team-kicker) h2,
+section:has(.afpa-team-kicker) .section-title,
+section:has(.afpa-team-kicker) .afpa-team-title {
+  color: #f7f3ea !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.55) !important;
+}
+
+.afpa-team-section h2 em,
+.afpa-team-section h2 span,
+.afpa-team-section .section-title em,
+.afpa-team-section .section-title span,
+section:has(.afpa-team-kicker) h2 em,
+section:has(.afpa-team-kicker) h2 span,
+section:has(.afpa-team-kicker) .section-title em,
+section:has(.afpa-team-kicker) .section-title span {
+  color: #9fe870 !important;
+  opacity: 1 !important;
+}
+
+/* Sag aciklama metni */
+.afpa-team-section p,
+.afpa-team-section .section-copy,
+.afpa-team-section .afpa-team-copy,
+.afpa-team-section .lead,
+section:has(.afpa-team-kicker) p,
+section:has(.afpa-team-kicker) .section-copy,
+section:has(.afpa-team-kicker) .afpa-team-copy,
+section:has(.afpa-team-kicker) .lead {
+  color: rgba(247, 243, 234, 0.86) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34) !important;
+}
+
+/* Kart grid */
+.afpa-team-section .afpa-team-grid,
+.afpa-team-section [class*="team-grid"],
+section:has(.afpa-team-kicker) .afpa-team-grid,
+section:has(.afpa-team-kicker) [class*="team-grid"] {
+  gap: 24px !important;
+}
+
+/* Kart genel */
+.afpa-team-section .afpa-team-card,
+.afpa-team-section [class*="team-card"],
+section:has(.afpa-team-kicker) .afpa-team-card,
+section:has(.afpa-team-kicker) [class*="team-card"] {
+  background: linear-gradient(180deg, rgba(7, 54, 45, 0.96), rgba(2, 28, 23, 0.98)) !important;
+  border: 1px solid rgba(159, 232, 112, 0.36) !important;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.22) !important;
+  color: #f7f3ea !important;
+  opacity: 1 !important;
+  overflow: hidden !important;
+}
+
+/* Fotograf/placeholder alani */
+.afpa-team-section .afpa-team-photo,
+.afpa-team-section [class*="team-photo"],
+.afpa-team-section [class*="team-image"],
+.afpa-team-section [class*="photo"],
+section:has(.afpa-team-kicker) .afpa-team-photo,
+section:has(.afpa-team-kicker) [class*="team-photo"],
+section:has(.afpa-team-kicker) [class*="team-image"],
+section:has(.afpa-team-kicker) [class*="photo"] {
+  background:
+    linear-gradient(135deg, rgba(10, 84, 70, 0.96), rgba(5, 44, 37, 0.96)) !important;
+  color: rgba(247, 243, 234, 0.82) !important;
+  opacity: 1 !important;
+  border-bottom: 1px solid rgba(159, 232, 112, 0.32) !important;
+}
+
+/* Fotograf eklenecek yazisi */
+.afpa-team-section .afpa-team-photo *,
+.afpa-team-section [class*="team-photo"] *,
+.afpa-team-section [class*="team-image"] *,
+.afpa-team-section [class*="photo"] *,
+section:has(.afpa-team-kicker) .afpa-team-photo *,
+section:has(.afpa-team-kicker) [class*="team-photo"] *,
+section:has(.afpa-team-kicker) [class*="team-image"] *,
+section:has(.afpa-team-kicker) [class*="photo"] * {
+  color: rgba(247, 243, 234, 0.82) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Kart ic yazilari */
+.afpa-team-section .afpa-team-card h3,
+.afpa-team-section [class*="team-card"] h3,
+.afpa-team-section .afpa-team-name,
+.afpa-team-section [class*="team-name"],
+section:has(.afpa-team-kicker) .afpa-team-card h3,
+section:has(.afpa-team-kicker) [class*="team-card"] h3,
+section:has(.afpa-team-kicker) .afpa-team-name,
+section:has(.afpa-team-kicker) [class*="team-name"] {
+  color: #f7f3ea !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42) !important;
+  font-weight: 800 !important;
+}
+
+.afpa-team-section .afpa-team-role,
+.afpa-team-section [class*="team-role"],
+section:has(.afpa-team-kicker) .afpa-team-role,
+section:has(.afpa-team-kicker) [class*="team-role"] {
+  color: #9fe870 !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+
+.afpa-team-section .afpa-team-card p,
+.afpa-team-section [class*="team-card"] p,
+.afpa-team-section .afpa-team-bio,
+.afpa-team-section [class*="team-bio"],
+section:has(.afpa-team-kicker) .afpa-team-card p,
+section:has(.afpa-team-kicker) [class*="team-card"] p,
+section:has(.afpa-team-kicker) .afpa-team-bio,
+section:has(.afpa-team-kicker) [class*="team-bio"] {
+  color: rgba(247, 243, 234, 0.82) !important;
+  opacity: 1 !important;
+  line-height: 1.7 !important;
+}
+
+/* Numara */
+.afpa-team-section .afpa-team-number,
+.afpa-team-section [class*="team-number"],
+section:has(.afpa-team-kicker) .afpa-team-number,
+section:has(.afpa-team-kicker) [class*="team-number"] {
+  color: #9fe870 !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+}
+
+/* Telefon / e-posta butonlari */
+.afpa-team-section a,
+.afpa-team-section .afpa-team-contact,
+.afpa-team-section [class*="team-contact"],
+section:has(.afpa-team-kicker) a,
+section:has(.afpa-team-kicker) .afpa-team-contact,
+section:has(.afpa-team-kicker) [class*="team-contact"] {
+  color: #f7f3ea !important;
+  opacity: 1 !important;
+}
+
+.afpa-team-section .afpa-team-actions a,
+.afpa-team-section [class*="team-actions"] a,
+section:has(.afpa-team-kicker) .afpa-team-actions a,
+section:has(.afpa-team-kicker) [class*="team-actions"] a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 32px !important;
+  padding: 8px 10px !important;
+  color: #f7f3ea !important;
+  background: rgba(159, 232, 112, 0.10) !important;
+  border: 1px solid rgba(159, 232, 112, 0.38) !important;
+  border-radius: 999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.afpa-team-section .afpa-team-note,
+.afpa-team-section [class*="team-note"],
+section:has(.afpa-team-kicker) .afpa-team-note,
+section:has(.afpa-team-kicker) [class*="team-note"] {
+  color: rgba(247, 243, 234, 0.72) !important;
+  opacity: 1 !important;
+}
+
+/* Bazi onceki CSS'ler genel opacity/filter veriyorsa sifirla */
+.afpa-team-section *,
+section:has(.afpa-team-kicker) * {
+  filter: none !important;
+}
+
+/* Desktop uzerinde basligi cok ezmeden biraz daha dengeli yap */
+@media (min-width: 901px) {
+  .afpa-team-section .afpa-team-card,
+  .afpa-team-section [class*="team-card"],
+  section:has(.afpa-team-kicker) .afpa-team-card,
+  section:has(.afpa-team-kicker) [class*="team-card"] {
+    min-height: 430px !important;
+  }
+
+  .afpa-team-section .afpa-team-photo,
+  .afpa-team-section [class*="team-photo"],
+  .afpa-team-section [class*="team-image"],
+  section:has(.afpa-team-kicker) .afpa-team-photo,
+  section:has(.afpa-team-kicker) [class*="team-photo"],
+  section:has(.afpa-team-kicker) [class*="team-image"] {
+    min-height: 235px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .afpa-team-section,
+  section:has(.afpa-team-kicker) {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .afpa-team-section h2,
+  section:has(.afpa-team-kicker) h2 {
+    font-size: clamp(42px, 13vw, 72px) !important;
+    line-height: 0.95 !important;
+  }
+}
