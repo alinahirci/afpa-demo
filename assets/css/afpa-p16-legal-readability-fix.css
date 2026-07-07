@@ -1,0 +1,151 @@
+/* AFPA P16 - Legal pages final readability fix
+   Scope: kvkk.html, gizlilik-politikasi.html, kullanim-sartlari.html
+   This file intentionally loads last and uses strong specificity because older theme files override legal hero colors. */
+
+html body .legal-hero {
+  position: relative !important;
+  min-height: 0 !important;
+  padding: clamp(92px, 9vw, 132px) 0 clamp(52px, 6vw, 78px) !important;
+  background:
+    linear-gradient(135deg, rgba(3, 24, 19, .96) 0%, rgba(8, 69, 58, .94) 56%, rgba(14, 95, 78, .90) 100%),
+    radial-gradient(circle at 88% 20%, rgba(143, 209, 79, .18), transparent 34%) !important;
+  color: #f7f3ea !important;
+  overflow: hidden !important;
+}
+
+html body .legal-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(1, 16, 13, .40), rgba(1, 16, 13, .08) 55%, rgba(1, 16, 13, .18)) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+html body .legal-hero::after {
+  opacity: .28 !important;
+  filter: blur(4px) !important;
+}
+
+html body .legal-hero .container,
+html body .legal-hero__inner {
+  width: min(1180px, calc(100% - 48px)) !important;
+  max-width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html body .legal-hero .eyebrow,
+html body .legal-hero .small-title,
+html body .legal-hero span {
+  color: #8fd14f !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 900 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .28) !important;
+}
+
+html body .legal-hero h1,
+html body main .legal-hero h1 {
+  max-width: 940px !important;
+  margin: 18px 0 22px !important;
+  color: #fffaf0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: clamp(46px, 6vw, 86px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+  text-shadow: 0 14px 38px rgba(0, 0, 0, .42) !important;
+}
+
+html body .legal-hero p,
+html body main .legal-hero p {
+  max-width: 780px !important;
+  color: rgba(247, 243, 234, .90) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: clamp(16px, 1.6vw, 20px) !important;
+  line-height: 1.72 !important;
+  font-weight: 600 !important;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, .30) !important;
+}
+
+html body .legal-page-section {
+  background: #f5f1e8 !important;
+  padding: clamp(48px, 7vw, 86px) 0 clamp(68px, 8vw, 104px) !important;
+}
+
+html body .legal-page-section .container {
+  width: min(1180px, calc(100% - 48px)) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body .legal-card {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: clamp(32px, 5vw, 60px) !important;
+  border: 1px solid rgba(14, 66, 55, .14) !important;
+  border-radius: 28px !important;
+  background: rgba(255, 255, 255, .96) !important;
+  box-shadow: 0 30px 96px rgba(6, 35, 29, .12) !important;
+  color: #10231e !important;
+}
+
+html body .legal-card h2,
+html body .legal-block h2 {
+  color: #10231e !important;
+  opacity: 1 !important;
+  font-size: clamp(24px, 2.7vw, 36px) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.035em !important;
+}
+
+html body .legal-card p,
+html body .legal-block p,
+html body .legal-card li {
+  color: rgba(16, 35, 30, .78) !important;
+  opacity: 1 !important;
+  font-size: 17px !important;
+  line-height: 1.78 !important;
+  font-weight: 500 !important;
+}
+
+html body .legal-note {
+  color: rgba(16, 35, 30, .84) !important;
+  background: rgba(143, 209, 79, .12) !important;
+  border-left: 4px solid #8fd14f !important;
+}
+
+@media (max-width: 768px) {
+  html body .legal-hero {
+    padding: 86px 0 50px !important;
+  }
+
+  html body .legal-hero .container,
+  html body .legal-hero__inner,
+  html body .legal-page-section .container {
+    width: min(100% - 32px, 1180px) !important;
+  }
+
+  html body .legal-hero h1 {
+    font-size: clamp(38px, 12vw, 58px) !important;
+    letter-spacing: -.05em !important;
+  }
+
+  html body .legal-hero p {
+    font-size: 15.5px !important;
+    line-height: 1.68 !important;
+  }
+
+  html body .legal-card {
+    border-radius: 22px !important;
+    padding: 26px 20px !important;
+  }
+}
